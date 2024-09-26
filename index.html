@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+  <div class="head" id="head">
+    <div class="alert alert-dark alert-dismissible bg-dark text-white d-flex justify-content-center align-items-center"
+      role="alert">
+      <p class="mb-0 text-center fw-light">Sign up and get 20% off your first order.
+        <a href="SignUp.html" class="text-white text-decoration-underline">Sign Up Now</a>
+      </p>
+      <button class="btn-close btn-close-white position-absolute end-0 me-3" aria-label="Close"
+        data-bs-dismiss="alert"></button>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+      <div class="container justify-content-between ">
+        <a class="navbar-brand order-lg-1 order-2 fw-bold " href="index.html">
+          <h1 style="font-family:Integral CF; font-weight: bolder;">SHOP.CO</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse order-lg-2 order-3" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <select class="form-select border-0">
+                <option style="font-family:Satoshi;">Shop</option>
+                <option style="font-family:Satoshi;">shop2</option>
+                <option style="font-family:Satoshi;">shop3</option>
+              </select>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="font-family:Satoshi;">On Sale</a>
+            </li>
+            <li class="nav-item" style="font-family:Satoshi;">
+              <a class="nav-link" href="#">New Arrivals</a>
+            </li>
+            <li class="nav-item" style="font-family:Satoshi;">
+              <a class="nav-link" href="#">Brands</a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-flex ms-auto  order-lg-3 order-2 ">
+          <!-- Ô tìm kiếm -->
+          <form role="search">
+            <div class="input-group border border-1 border-thick rounded-pill">
+              <button class="btn rounded-start" type="submit">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+              <input type="search" class="form-control rounded-end d-none d-md-flex border-0" placeholder="Tìm kiếm..."
+                aria-label="Search">
+            </div>
+          </form>
+          <!-- Biểu tượng giỏ hàng -->
+          <a href="#" class="btn ms-1">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+          <a href="#" class="btn ms-1"><i class="fa-regular fa-circle-user"></i></a>
+
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class=" banner " style="background: #F2F0F1;">
+      <div class="container">
+        <div class="row ">
+          <div class="col md-7 ">
+            <h5 class="fs-1" style="font-family:Integral CF; font-weight: bold;">FIND CLOTHES THAT
+              MATCHES
+              YOUR STYLE</h5>
+            <p class="row mb-4 fw-light">Browse through our diverse range of meticulously crafted garments, designed to bring out
+              your individuality and cater to your sense of style.</p>
+            <button class="row btn mb-5 bg-dark text-white border rounded-pill">Shop Now</button>
+
+            <div class="row text-left d-flex align-items-center" id="info">
+              <div class="col  navbar-nav">
+                <h3 class="fw-bolder">200+</h3>
+                <p class="fw-light">International Brands</p>
+              </div>
+              <div class="col text-center">
+                <h3 class="fw-bolder">2,000+</h3>
+                <p class="fw-light">High-Quality Products</p>
+              </div>
+              <div class="col-md-3 text-center">
+                <h3 class="fw-bolder">30,000+</h3>
+                <p class="fw-light">Happy Customers</p>
+              </div>
+            </div>
+          </div>
+          <div class="col md-5">
+            <img src="anh/Rectangle 2.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar bg-black text-center">
+      <div class="container-fluid d-flex justify-content-between">
+        <div class="row w-100 bg-black">
+          <div class="col text-center">
+            <a href="#" class="text-white text-decoration-none fs-2"
+              style="font-family: AktivGrotesk Regular;">VESACE</a>
+          </div>
+          <div class="col text-center">
+            <a href="#" class="text-white text-decoration-none fs-2" style="font-family: GT America;">RAZA</a>
+          </div>
+          <div class="col text-center">
+            <a href="#" class="text-white text-decoration-none fs-2" style="font-family: Bodoni Moda;">GUUCI</a>
+          </div>
+          <div class="col text-center">
+            <a href="#" class="text-white text-decoration-none fs-2" style="font-family: Trajan;">PRADA</a>
+          </div>
+          <div class="col text-center">
+            <a href="#" class="text-white text-decoration-none fs-2" style="font-family: Montserrat;">Calvin Klein</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- phan` o? giua~ -->
+  <div id="mid">
+    <!--NewArrivals  -->
+    <div class="container d-flex flex-column align-items-center " id="NewArrivals">
+      <h2 class="text-center mt-5 fw-bolder fs-1" style="font-family:Integral CF;">NEW ARRIVALS</h2>
+      <div class="row mt-3" id="1">
+        <div class="col  col-md-3 mb-3 image-item show">
+          <img src="anh/Frame 32.png" class="img-fluid" alt="">
+          <h4>T-SHIRT WITH TAPE DETAILS</h4>
+          <div id="star">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <span class="ms-2">4,5/5</span>
+
+          </div>
+          <b>$120</b>
+        </div>
+        <div class="col  col-md-3 mb-3 image-item show ">
+          <img src="anh/Frame 33.png" class="img-fluid" alt="">
+          <h4>SKINNY FIT JEANS</h4>
+          <div id="star">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <span class="ms-2">3,5/5</span>
+          </div>
+          <b>$120</b><b class="text-decoration-line-through text-muted ms-2">$260</b><span class="text-danger ms-2"
+            style="transform: scale(0.4);">-20%</span>
+        </div>
+        <div class="col col-md-3 mb-3 image-item d-none d-md-block ">
+          <img src="anh/Frame 34.png" class="img-fluid" alt="">
+          <h4>CHECKERED SHIRT</h4>
+          <div id="star">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <span class="ms-2">4,5/5</span>
+          </div>
+          <b>$180</b>
+        </div>
+        <div class="col col-md-3 mb-3 image-item d-none d-md-block ">
+          <img src="anh/Frame 38.png" class="img-fluid" alt="">
+          <h4>VERTICAL STRIPED SHIRT</h4>
+          <div id="star">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <span class="ms-2">4,5/5</span>
+          </div>
+          <b>$130</b><b class="text-decoration-line-through text-muted ms-2">$160</b><span class="text-danger ms-2"
+            style="transform: scale(0.4);">-30%</span>
+        </div>
+      </div>
+      <button
+        class="btn my-3 border border-1 rounded-pill border-opacity-10 d-flex justify-content-center border border-primary flex-grow-1 mx-2 border-thick px-3 ">View
+        All</button>
+    </div>
+    <!-- TopSelling -->
+    <div class="container d-flex flex-column align-items-center" id="TopSelling">
+      <h2 class="text-center mt-5 fw-bold fw-bolder fs-1" style="font-family:Integral CF;">TOP SELLING</h2>
+      <div class="row mt-3" id="1">
+        <div class="col  col-md-3 mb-3 image-item show">
+          <img src="anh/Frame 32-1.png" class="img-fluid" alt="">
+          <h4>VERTICAL STRIPED SHIRTT</h4>
+          <div id="star">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <span class="ms-2">5.0/5</span>
+
+          </div>
+          <b>$212</b><b class="text-decoration-line-through text-muted ms-2">$232</b><span class="text-danger ms-2"
+            style="transform: scale(0.4);">-20%</span>
+        </div>
+        <div class="col  col-md-3 mb-3 image-item show ">
+          <img src="anh/Frame 33-1.png" class="img-fluid" alt="">
+          <h4>COURAGE GRAPHIC T-SHIRT</h4>
+          <div id="star">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <span class="ms-2">4/5</span>
+          </div>
+          <b>$145</b>
+        </div>
+        <div class="col col-md-3 mb-3 image-item d-none d-md-block ">
+          <img src="anh/Frame 34.png" class="img-fluid" alt="">
+          <h4>LOOSE FIT BERMUDA SHORTS</h4>
+          <div id="star">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <span class="ms-2">3/5</span>
+          </div>
+          <b>$80</b>
+        </div>
+        <div class="col col-md-3 mb-3 image-item d-none d-md-block ">
+          <img src="anh/Frame 38.png" class="img-fluid" alt="">
+          <h4>FADED SKINNY JEANS</h4>
+          <div id="star">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <span class="ms-2">4,5/5</span>
+          </div>
+          <b>$210</b>
+        </div>
+      </div>
+      <button
+        class="btn my-3 border border-dark border-1 rounded-pill  border-opacity-10 d-flex justify-content-center px-">View
+        All</button>
+    </div>
+    <!-- BROWSE BY DRESS STYLE -->
+    <div class="container d-flex flex-column align-items-center bg-body-tertiary" id="browse">
+      <h2 class="text-center mt-5 fw-bold" style="font-family: 'Integral CF'; font-weight: bolded;">
+        BROWSE BY DRESS STYLE</h2>
+
+      <div class="row justify-content-center">
+        <!-- Khi màn hình nhỏ, mỗi ảnh chiếm trọn một hàng (col-12), và khi lớn hơn màn hình nhỏ thì sẽ theo tỉ lệ cột đã định -->
+        <div class="col-12 col-md-5 d-flex justify-content-center align-items-center my-3">
+          <img src="anh/Frame 61.png" class="img-fluid ms-0" alt="Casual">
+        </div>
+        <div class="col-12 col-md-7 d-flex justify-content-center align-items-center my-3">
+          <img src="anh/Frame 62.png" class="img-fluid" alt="Formal">
+        </div>
+
+        <!-- Hàng dưới có thêm lớp margin top (mt-4) để tạo khoảng cách -->
+        <div class="col-12 col-md-7 d-flex justify-content-center align-items-center my-3">
+          <img src="anh/Frame 64.png" class="img-fluid" alt="Gym">
+        </div>
+        <div class="col-12 col-md-5 d-flex justify-content-center align-items-center my-3">
+          <img src="anh/Frame 63.png" class="img-fluid" alt="Party">
+        </div>
+      </div>
+    </div>
+    <div class="container d-flex flex-column" id="caicuoi">
+      <div class="d-flex align-items-center justify-content-between mt-5">
+        <h1 class="fw-bold fs-1 text-weight-bold" style="font-weight: 30pt;font-family: Arial, Helvetica, sans-serif;">
+          OUR HAPPY CUSTOMERS</h1>
+        <div>
+          <div class="icons d-flex align-items-center">
+            <i class="bi bi-arrow-left ms-2"></i>
+            <i class="bi bi-arrow-right ms-2"></i>
+          </div>          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col p-4 border border-success border-opacity-10 rounded-4 m-4">
+          <div id="star">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <h4>Alex K.<i class="bi bi-check-circle-fill text-success ms-2"></i></h4>
+          <p>""Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The
+            range of options they offer is truly remarkable, catering to a variety of tastes and occasions.”</p>
+        </div>
+        <div class="col p-4 border border-success border-opacity-10 rounded-4 m-4 d-none d-md-block">
+          <div id="star">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <h4>James L.<i class="bi bi-check-circle-fill text-success ms-2"></i></h4>
+          <p>"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon
+            Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.”</p>
+        </div>
+        <div class="col p-4 border border-success border-opacity-10 rounded-4 m-4 d-none d-md-block">
+          <div id="star">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <h4>Sarah M.<i class="bi bi-check-circle-fill text-success ms-2 mx-2"></i></h4>
+          <p>"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to
+            elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-flex flex-column" id="end">
+      <div class="row align-items-center bg-black border rounded-4">
+        <!-- Phần tiêu đề -->
+        <div class="col-md-6 text-white text-md-left">
+          <h2 class="fw-bold m-5">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+        </div>
+        <!-- Phần nhập email -->
+        <div class="col-md-6">
+          <form class="d-flex flex-column justify-content-center justify-content-md-end m-5 w-50 mx-auto">
+            <div class="input-group mb-3 bg-light rounded-pill"> <!-- Đặt rounded-pill ở đây -->
+              <span class="input-group-text bg-light border-0 rounded-pill"> <!-- Thêm rounded-pill vào đây -->
+                <i class="bi bi-envelope text-body-tertiary text-weight-bold"></i>
+              </span>
+              <input type="email" class="form-control rounded-pill" placeholder="Enter your email address"
+                aria-label="Email">
+            </div>
+            <button class="btn btn-light rounded-pill w-100" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- thong tin lien lac -->
+  <div id="connect" class="mt-5" style="background: #F0F0F0;">
+    <div class="container py-4 border-bottom border-secondary-subtle " id="ttTren">
+      <div class="row">
+        <!-- Phần thương hiệu và mô tả -->
+        <div class="col-md-3">
+          <b class="fs-2">Shop.co</b>
+          <h4 class="fs-6 fw-lighter">We have clothes that suits your style and which you’re proud to wear. From women to men.</h4>
+          <div class="d-flex justify-content-start align-items-center mt-2">
+            <i class="bi bi-twitter fs-6 border rounded-circle p-2"></i>
+            <i class="bi bi-facebook fs-6 mx-2"></i>
+            <i class="bi bi-instagram fs-6 mx-2"></i>
+            <i class="bi bi-github fs-6 mx-2"></i>
+          </div>
+        </div>
+        
+        <!-- Phần chính -->
+        <div class="col-md-9">
+          <div class="d-flex flex-wrap justify-content-around">
+            <!-- Phần Company -->
+            <div class="col-6 col-md-2 mt-3">
+              <h4 style="font-family:Satoshi;" class="fw-medium">Company</h4>
+              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Features</a>
+              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Works</a>
+              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Career</a>
+            </div>
+            <!-- Phần Help -->
+            <div class="col-6 col-md-2 mt-3">
+              <h4 style="font-family:Satoshi;" class="fw-medium">Help</h4>
+              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Customer Support</a>
+              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Delivery Details</a>
+              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Terms & Conditions</a>
+              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Privacy Policy</a>
+            </div>
+            <!-- Phần FAQ -->
+            <div class="col-6 col-md-2 mt-3">
+              <h4 style="font-family:Satoshi;" class="fw-medium">FAQ</h4>
+              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Account</a>
+              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Orders</a>
+              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Payments</a>
+            </div>
+            <!-- Phần Resources -->
+            <div class="col-6 col-md-2 mt-3">
+              <h4 style="font-family:Satoshi;" class="fw-medium">Resources</h4>
+              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Free eBooks</a>
+              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Development Tutorial</a>
+              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">How to - Blog</a>
+              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Youtube Playlist</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+    <div class="container">
+      <div class="row pb-5 d-flex justify-content-center align-items-center " id="end">
+        <div class="col-auto fw-lighter " id="copyright">Shop.co &copy; 2000–2023, All Rights Reserved</div>
+        <div class="col-auto d-flex justify-content-between ms-auto" id="payment-methods">
+          <div class="d-flex justify-content-center align-items-center pay-item">
+            <img src="anh/pay/Badge.png">	
+          </div>
+          <div class="d-flex justify-content-center align-items-center pay-item">
+            <img src="anh/pay/Badge (1).png">
+          </div>
+          <div class="d-flex justify-content-center align-items-center pay-item">
+            <img src="anh/pay/Badge (2).png">
+          </div>
+          <div class="d-flex justify-content-center align-items-center pay-item">
+            <img src="anh/pay/Badge (3).png">
+          </div>
+          <div class="d-flex justify-content-center align-items-center pay-item">
+            <img src="anh/pay/Badge (4).png">
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>
