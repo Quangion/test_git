@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Shop.cc</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -15,17 +15,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+  <!-- chuyen dong  -->
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="css/main.css">
-
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <link rel="stylesheet" href="font/stylesheet.css">
 </head>
 
 <body>
   <div class="head" id="head">
     <div class="alert alert-dark alert-dismissible bg-dark text-white d-flex justify-content-center align-items-center"
       role="alert">
-      <p class="mb-0 text-center fw-light">Sign up and get 20% off your first order.
+      <p class="mb-0 text-center">Sign up and get 20% off your first order.
         <a href="SignUp.html" class="text-white text-decoration-underline">Sign Up Now</a>
       </p>
       <button class="btn-close btn-close-white position-absolute end-0 me-3" aria-label="Close"
@@ -33,8 +34,8 @@
     </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
       <div class="container justify-content-between ">
-        <a class="navbar-brand order-lg-1 order-2 fw-bold " href="index.html">
-          <h1 style="font-family:Integral CF; font-weight: bolder;">SHOP.CO</h1>
+        <a class="order-lg-1 order-2 fw-bold " href="index.html">
+          <img src="anh/logo/shop.svg" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,12 +43,15 @@
         </button>
         <div class="collapse navbar-collapse order-lg-2 order-3" id="navbarNav">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <select class="form-select border-0">
-                <option style="font-family:Satoshi;">Shop</option>
-                <option style="font-family:Satoshi;">shop2</option>
-                <option style="font-family:Satoshi;">shop3</option>
-              </select>
+            <li class="nav-item dropdown" style="font-family:Satoshi;">
+              <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Shop
+              </button>
+              <ul class="dropdown-menu dropdown-menu-light">
+                <li><a class="dropdown-item" href="#">Shop1</a></li>
+                <li><a class="dropdown-item" href="#"> Shop2</a></li>
+                <li><a class="dropdown-item" href="#">Shop3</a></li>
+              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#" style="font-family:Satoshi;">On Sale</a>
@@ -62,15 +66,31 @@
         </div>
         <div class="d-flex ms-auto  order-lg-3 order-2 ">
           <!-- Ô tìm kiếm -->
-          <form role="search">
-            <div class="input-group border border-1 border-thick rounded-pill">
-              <button class="btn rounded-start" type="submit">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </button>
-              <input type="search" class="form-control rounded-end d-none d-md-flex border-0" placeholder="Tìm kiếm..."
-                aria-label="Search">
+          <!-- Nút tìm kiếm cho màn hình nhỏ -->
+          <button class="btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+            aria-controls="offcanvasTop">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+          <!-- Offcanvas content -->
+          <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasTopLabel">Search for products</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-          </form>
+            <div class="offcanvas-body">
+              <!-- Nội dung tìm kiếm khi màn hình lớn -->
+              <form role="search">
+                <div class="input-group border border-1 border-thick rounded-pill px-2">
+                  <button class="btn rounded-start" type="submit">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                  <input type="search" class="form-control border-0" placeholder="Search for products..."
+                    aria-label="Search">
+                </div>
+              </form>
+            </div>
+          </div>
+
           <!-- Biểu tượng giỏ hàng -->
           <a href="#" class="btn ms-1">
             <i class="fas fa-shopping-cart"></i>
@@ -84,53 +104,55 @@
     <div class=" banner " style="background: #F2F0F1;">
       <div class="container">
         <div class="row ">
-          <div class="col md-7 ">
-            <h5 class="fs-1" style="font-family:Integral CF; font-weight: bold;">FIND CLOTHES THAT
-              MATCHES
-              YOUR STYLE</h5>
-            <p class="row mb-4 fw-light">Browse through our diverse range of meticulously crafted garments, designed to bring out
-              your individuality and cater to your sense of style.</p>
-            <button class="row btn mb-5 bg-dark text-white border rounded-pill">Shop Now</button>
+          <div class="col-12 col-md-7 pt-5">
+            <h5 class="findstyle">FIND CLOTHES THAT MATCHES YOUR STYLE</h5>
+            <h5 class="row mx-1 " id="text1">Browse through our diverse range of meticulously crafted garments, designed
+              to bring out
+              your individuality and cater to your sense of style.</h5>
+            <div class="col-12 col-md-3"> <!-- Sử dụng col-md-3 để đạt khoảng 25% (3/12) chiều rộng -->
+              <button class="btn mb-5 bg-dark text-white border rounded-pill mt-4 py-2 mx-1 w-100"
+                style="font-family: Satoshi;">Shop Now</button>
+            </div>
 
-            <div class="row text-left d-flex align-items-center" id="info">
-              <div class="col  navbar-nav">
-                <h3 class="fw-bolder">200+</h3>
-                <p class="fw-light">International Brands</p>
+            <div class="row  align-items-center justify-content-center text-center" id="info">
+              <div class="col border-end">
+                <h3 class="thechu">200+</h3>
+                <p id="text1">International Brands</p>
               </div>
-              <div class="col text-center">
-                <h3 class="fw-bolder">2,000+</h3>
-                <p class="fw-light">High-Quality Products</p>
+              <div class="col border-end border-md-0">
+                <h3 class="thechu">2,000+</h3>
+                <p id="text1">High-Quality Products</p>
               </div>
-              <div class="col-md-3 text-center">
-                <h3 class="fw-bolder">30,000+</h3>
-                <p class="fw-light">Happy Customers</p>
+              <div class="col ">
+                <h3 class="thechu">30,000+</h3>
+                <p id="text1">Happy Customers</p>
               </div>
             </div>
           </div>
-          <div class="col md-5">
-            <img src="anh/Rectangle 2.png" alt="">
+          <div class="col-12 col-md-5 justify-content-end align-items-end"
+            style="display: flex; align-items: flex-end;">
+            <img src="anh/anhnen.svg" alt="" style="width: 100%;">
           </div>
         </div>
       </div>
     </div>
     <div class="navbar bg-black text-center">
       <div class="container-fluid d-flex justify-content-between">
-        <div class="row w-100 bg-black">
+        <div class="row w-100 bg-black ">
           <div class="col text-center">
-            <a href="#" class="text-white text-decoration-none fs-2"
-              style="font-family: AktivGrotesk Regular;">VESACE</a>
+            <img src="anh/logo/ver.svg" alt="" class="py-2">
           </div>
           <div class="col text-center">
-            <a href="#" class="text-white text-decoration-none fs-2" style="font-family: GT America;">RAZA</a>
+            <img src="anh/logo/zara.svg" alt="" class="py-2">
           </div>
           <div class="col text-center">
-            <a href="#" class="text-white text-decoration-none fs-2" style="font-family: Bodoni Moda;">GUUCI</a>
+            <img src="anh/logo/gucci.svg" alt="" class="py-2">
           </div>
           <div class="col text-center">
-            <a href="#" class="text-white text-decoration-none fs-2" style="font-family: Trajan;">PRADA</a>
+            <img src="anh/logo/pra.svg" alt="" class="py-2">
           </div>
           <div class="col text-center">
-            <a href="#" class="text-white text-decoration-none fs-2" style="font-family: Montserrat;">Calvin Klein</a>
+            <img src="anh/logo/cla.svg" alt="" class="py-2">
           </div>
         </div>
       </div>
@@ -140,12 +162,13 @@
   <!-- phan` o? giua~ -->
   <div id="mid">
     <!--NewArrivals  -->
-    <div class="container d-flex flex-column align-items-center " id="NewArrivals">
+    <div class="container d-flex flex-column align-items-center topic" id="NewArrivals">
       <h2 class="text-center mt-5 fw-bolder fs-1" style="font-family:Integral CF;">NEW ARRIVALS</h2>
-      <div class="row mt-3" id="1">
-        <div class="col  col-md-3 mb-3 image-item show">
-          <img src="anh/Frame 32.png" class="img-fluid" alt="">
-          <h4>T-SHIRT WITH TAPE DETAILS</h4>
+
+      <div class="row mt-3" id="">
+        <div class="col  col-md-3 mb-3 image-item ">
+          <img src="anh/Frame 32.png" class=" " alt="">
+          <h4 class="text-capitalize">T-shirt with tap details </h4>
           <div id="star">
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill"></i>
@@ -157,9 +180,9 @@
           </div>
           <b>$120</b>
         </div>
-        <div class="col  col-md-3 mb-3 image-item show ">
-          <img src="anh/Frame 33.png" class="img-fluid" alt="">
-          <h4>SKINNY FIT JEANS</h4>
+        <div class="col  col-md-3 mb-3 image-item ">
+          <img src="anh/Frame 33.png" class="" alt="">
+          <h4 class="text-capitalize">Skinny Fit Jean</h4>
           <div id="star">
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill"></i>
@@ -167,12 +190,12 @@
             <i class="bi bi-star-half"></i>
             <span class="ms-2">3,5/5</span>
           </div>
-          <b>$120</b><b class="text-decoration-line-through text-muted ms-2">$260</b><span class="text-danger ms-2"
-            style="transform: scale(0.4);">-20%</span>
+          <b>$120</b><b class="text-decoration-line-through text-body-tertiary text-muted ms-2">$260</b><span
+            class="text-danger ms-2" id="span1">-20%</span>
         </div>
-        <div class="col col-md-3 mb-3 image-item d-none d-md-block ">
-          <img src="anh/Frame 34.png" class="img-fluid" alt="">
-          <h4>CHECKERED SHIRT</h4>
+        <div class="col col-md-3 mb-3 image-item  ">
+          <img src="anh/Frame 34.png" class="" alt="">
+          <h4 class="text-capitalize">Checkered Shirt</h4>
           <div id="star">
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill"></i>
@@ -183,9 +206,9 @@
           </div>
           <b>$180</b>
         </div>
-        <div class="col col-md-3 mb-3 image-item d-none d-md-block ">
-          <img src="anh/Frame 38.png" class="img-fluid" alt="">
-          <h4>VERTICAL STRIPED SHIRT</h4>
+        <div class="col col-md-3 mb-3 image-item  ">
+          <img src="anh/Frame 38.png" class="" alt="">
+          <h4 class="text-capitalize">Sleeve Striped T-shirtT</h4>
           <div id="star">
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill"></i>
@@ -194,21 +217,21 @@
             <i class="bi bi-star-half"></i>
             <span class="ms-2">4,5/5</span>
           </div>
-          <b>$130</b><b class="text-decoration-line-through text-muted ms-2">$160</b><span class="text-danger ms-2"
-            style="transform: scale(0.4);">-30%</span>
+          <b>$130</b><b class="text-decoration-line-through text-muted ms-2 text-body-tertiary">$160</b><span
+            class="text-danger ms-2" id="span1">-30%</span>
         </div>
       </div>
       <button
-        class="btn my-3 border border-1 rounded-pill border-opacity-10 d-flex justify-content-center border border-primary flex-grow-1 mx-2 border-thick px-3 ">View
+        class="btn my-3 border border-1 rounded-pill border-opacity-10 d-flex justify-content-center border border-primary flex-grow-1 mx-2 border-thick px-5 py-2 ">View
         All</button>
     </div>
     <!-- TopSelling -->
-    <div class="container d-flex flex-column align-items-center" id="TopSelling">
+    <div class="container d-flex flex-column align-items-center topic" id="TopSelling">
       <h2 class="text-center mt-5 fw-bold fw-bolder fs-1" style="font-family:Integral CF;">TOP SELLING</h2>
       <div class="row mt-3" id="1">
         <div class="col  col-md-3 mb-3 image-item show">
           <img src="anh/Frame 32-1.png" class="img-fluid" alt="">
-          <h4>VERTICAL STRIPED SHIRTT</h4>
+          <h4 class="text-capitalize">Vertical Striped Shirt</h4>
           <div id="star">
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill"></i>
@@ -218,12 +241,12 @@
             <span class="ms-2">5.0/5</span>
 
           </div>
-          <b>$212</b><b class="text-decoration-line-through text-muted ms-2">$232</b><span class="text-danger ms-2"
-            style="transform: scale(0.4);">-20%</span>
+          <b>$212</b><b class="text-decoration-line-through text-muted text-body-tertiary ms-2">$232</b><span
+            class="text-danger ms-2" id="span1">-20%</span>
         </div>
         <div class="col  col-md-3 mb-3 image-item show ">
           <img src="anh/Frame 33-1.png" class="img-fluid" alt="">
-          <h4>COURAGE GRAPHIC T-SHIRT</h4>
+          <h4 class="text-capitalize">Courage Graphic T-shirt</h4>
           <div id="star">
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill"></i>
@@ -233,9 +256,9 @@
           </div>
           <b>$145</b>
         </div>
-        <div class="col col-md-3 mb-3 image-item d-none d-md-block ">
+        <div class="col col-md-3 mb-3 image-item ">
           <img src="anh/Frame 34.png" class="img-fluid" alt="">
-          <h4>LOOSE FIT BERMUDA SHORTS</h4>
+          <h4 class="text-capitalize">Loose Fit Bermuda Shorts</h4>
           <div id="star">
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill"></i>
@@ -244,9 +267,9 @@
           </div>
           <b>$80</b>
         </div>
-        <div class="col col-md-3 mb-3 image-item d-none d-md-block ">
+        <div class="col col-md-3 mb-3 image-item ">
           <img src="anh/Frame 38.png" class="img-fluid" alt="">
-          <h4>FADED SKINNY JEANS</h4>
+          <h4 class="text-capitalize">Faded Skinny Jeans</h4>
           <div id="star">
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill"></i>
@@ -259,7 +282,7 @@
         </div>
       </div>
       <button
-        class="btn my-3 border border-dark border-1 rounded-pill  border-opacity-10 d-flex justify-content-center px-">View
+        class="btn my-3 border border-dark border-1 rounded-pill  border-opacity-10 d-flex justify-content-center px-5 py-2">View
         All</button>
     </div>
     <!-- BROWSE BY DRESS STYLE -->
@@ -293,11 +316,11 @@
           <div class="icons d-flex align-items-center">
             <i class="bi bi-arrow-left ms-2"></i>
             <i class="bi bi-arrow-right ms-2"></i>
-          </div>          
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col p-4 border border-success border-opacity-10 rounded-4 m-4">
+      <div class="carousel" data-flickity='{ "wrapAround": true }'>
+        <div class="carousel-cell  border border-success border-opacity-10 rounded-4 m-4" id="carousel-1">
           <div id="star">
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill"></i>
@@ -309,7 +332,7 @@
           <p>""Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The
             range of options they offer is truly remarkable, catering to a variety of tastes and occasions.”</p>
         </div>
-        <div class="col p-4 border border-success border-opacity-10 rounded-4 m-4 d-none d-md-block">
+        <div class=" carousel-cell  border border-success border-opacity-10 rounded-4 m-4 " id="carousel-1">
           <div id="star">
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill"></i>
@@ -321,7 +344,7 @@
           <p>"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon
             Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.”</p>
         </div>
-        <div class="col p-4 border border-success border-opacity-10 rounded-4 m-4 d-none d-md-block">
+        <div class="carousel-cell  border border-success border-opacity-10 rounded-4 m-4 " id="carousel-1">
           <div id="star">
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill"></i>
@@ -330,6 +353,18 @@
             <i class="bi bi-star-fill"></i>
           </div>
           <h4>Sarah M.<i class="bi bi-check-circle-fill text-success ms-2 mx-2"></i></h4>
+          <p>"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to
+            elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+        </div>
+        <div class="carousel-cell  border border-success border-opacity-10 rounded-4 m-4 " id="carousel-1">
+          <div id="star">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <h4>Quang<i class="bi bi-check-circle-fill text-success ms-2 mx-2"></i></h4>
           <p>"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to
             elegant dresses, every piece I've bought has exceeded my expectations.”</p>
         </div>
@@ -344,15 +379,15 @@
         </div>
         <!-- Phần nhập email -->
         <div class="col-md-6">
-          <form class="d-flex flex-column justify-content-center justify-content-md-end m-5 w-50 mx-auto">
+          <form class="d-flex flex-column justify-content-center justify-content-md-end m-5  w-75 mx-auto">
             <div class="input-group mb-3 bg-light rounded-pill"> <!-- Đặt rounded-pill ở đây -->
               <span class="input-group-text bg-light border-0 rounded-pill"> <!-- Thêm rounded-pill vào đây -->
                 <i class="bi bi-envelope text-body-tertiary text-weight-bold"></i>
               </span>
-              <input type="email" class="form-control rounded-pill" placeholder="Enter your email address"
-                aria-label="Email">
+              <input type="email" class="form-control rounded-pill border-0 bg-light"
+                placeholder="Enter your email address" aria-label="Email">
             </div>
-            <button class="btn btn-light rounded-pill w-100" type="submit">Subscribe</button>
+            <button class="btn btn-light rounded-pill w-100" type="submit">Subscribe to Newsletter</button>
           </form>
         </div>
       </div>
@@ -364,8 +399,9 @@
       <div class="row">
         <!-- Phần thương hiệu và mô tả -->
         <div class="col-md-3">
-          <b class="fs-2">Shop.co</b>
-          <h4 class="fs-6 fw-lighter">We have clothes that suits your style and which you’re proud to wear. From women to men.</h4>
+          <b class="fs-2" style="font-family: Integral CF;">Shop.co</b>
+          <h4 class="fs-6 pt-2" id="text-2">We have clothes that suits your style and which you’re proud to wear. From
+            women to men.</h4>
           <div class="d-flex justify-content-start align-items-center mt-2">
             <i class="bi bi-twitter fs-6 border rounded-circle p-2"></i>
             <i class="bi bi-facebook fs-6 mx-2"></i>
@@ -373,52 +409,52 @@
             <i class="bi bi-github fs-6 mx-2"></i>
           </div>
         </div>
-        
+
         <!-- Phần chính -->
         <div class="col-md-9">
           <div class="d-flex flex-wrap justify-content-around">
             <!-- Phần Company -->
             <div class="col-6 col-md-2 mt-3">
               <h4 style="font-family:Satoshi;" class="fw-medium">Company</h4>
-              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Features</a>
-              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Works</a>
-              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Career</a>
+              <a class="text-decoration-none p-1 d-block" href="#" id="text-2">Features</a>
+              <a class="text-decoration-none p-1 d-block" href="#" id="text-2">Works</a>
+              <a class="text-decoration-none p-1 d-block" href="#" id="text-2">Career</a>
             </div>
             <!-- Phần Help -->
             <div class="col-6 col-md-2 mt-3">
               <h4 style="font-family:Satoshi;" class="fw-medium">Help</h4>
-              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Customer Support</a>
-              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Delivery Details</a>
-              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Terms & Conditions</a>
-              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Privacy Policy</a>
+              <a class="text-decoration-none p-1 d-block" href="#" id="text-2">Customer Support</a>
+              <a class="text-decoration-none p-1 d-block" href="#" id="text-2">Delivery Details</a>
+              <a class="text-decoration-none p-1 d-block" href="#" id="text-2">Terms & Conditions</a>
+              <a class="text-decoration-none p-1 d-block" href="#" id="text-2">Privacy Policy</a>
             </div>
             <!-- Phần FAQ -->
             <div class="col-6 col-md-2 mt-3">
               <h4 style="font-family:Satoshi;" class="fw-medium">FAQ</h4>
-              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Account</a>
-              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Orders</a>
-              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Payments</a>
+              <a class="text-decoration-none p-1 d-block" href="#" id="text-2">Account</a>
+              <a class="text-decoration-none p-1 d-block" href="#" id="text-2">Orders</a>
+              <a class="text-decoration-none p-1 d-block" href="#" id="text-2">Payments</a>
             </div>
             <!-- Phần Resources -->
             <div class="col-6 col-md-2 mt-3">
               <h4 style="font-family:Satoshi;" class="fw-medium">Resources</h4>
-              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Free eBooks</a>
-              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Development Tutorial</a>
-              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">How to - Blog</a>
-              <a class="text-decoration-none fw-lighter text-light-emphasis p-1 d-block" href="#">Youtube Playlist</a>
+              <a class="text-decoration-none p-1 d-block" href="#" id="text-2">Free eBooks</a>
+              <a class="text-decoration-none p-1 d-block" href="#" id="text-2">Development Tutorial</a>
+              <a class="text-decoration-none p-1 d-block" href="#" id="text-2">How to - Blog</a>
+              <a class="text-decoration-none p-1 d-block" href="#" id="text-2">Youtube Playlist</a>
             </div>
           </div>
         </div>
       </div>
-      
-      
+
+
     </div>
     <div class="container">
       <div class="row pb-5 d-flex justify-content-center align-items-center " id="end">
-        <div class="col-auto fw-lighter " id="copyright">Shop.co &copy; 2000–2023, All Rights Reserved</div>
+        <div class="col-auto " id="text-2">Shop.co &copy; 2000–2023, All Rights Reserved</div>
         <div class="col-auto d-flex justify-content-between ms-auto" id="payment-methods">
           <div class="d-flex justify-content-center align-items-center pay-item">
-            <img src="anh/pay/Badge.png">	
+            <img src="anh/pay/Badge.png">
           </div>
           <div class="d-flex justify-content-center align-items-center pay-item">
             <img src="anh/pay/Badge (1).png">
@@ -435,7 +471,7 @@
         </div>
       </div>
     </div>
-</div>
+  </div>
 
 
 </body>

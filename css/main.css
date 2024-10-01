@@ -1,6 +1,142 @@
 #star i {
-    color: #ffd700; /* Màu vàng (gold) */
-    font-size: 1.5rem; /* Điều chỉnh kích thước nếu cần */
-    transform: scale(0.55);
+  color: #ffd700;
+  /* Màu vàng (gold) */
+  font-size: 1.5rem;
+  /* Điều chỉnh kích thước nếu cần */
+  transform: scale(0.55);
+}
+
+/* cell  */
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Integral CF";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  text-align: left;
+}
+
+#carousel-1 {
+  width: 27%;
+  height: 200px;
+  margin-right: 10px;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+/* Khi màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+  #carousel-1 {
+    width: 100%;
   }
-  
+}
+#carousel-2 {
+  width: 25%;
+  height: 200px;
+  margin-right: 10px;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+.flickity-prev-next-button {
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+/* body */
+body{
+  font-family: "Satoshi";
+}
+.text-capitalize{
+  font-family: "Satoshi";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+  text-align: left;
+
+}
+.findstyle{
+  font-family: Integral CF;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 64px;
+  text-align: left;
+
+}
+/* Khi màn hình nhỏ hơn 576px */
+
+/* Khi màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+  .findstyle {
+    font-size: 35px; /* Giảm kích thước font */
+    line-height: 40px;
+  }
+}
+#text1 {
+  font-family: Satoshi;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  color: #00000099;
+}
+
+
+
+h3.thechu {
+  font-family: Satoshi;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 54px;
+  text-align: left;
+}
+#span1{
+  font-size: 0.8em;
+  font-weight: bold;
+  width: Fixed (58px)px;
+  height: Hug (28px)px;
+  padding: 6px 14px 6px 14px;
+  gap: 12px;
+  border-radius: 20px;
+  opacity: 0px;
+  background-color:#FF33331A;
+  ; 
+}
+#text-2{
+  font-family: Satoshi;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: left;
+  color: #00000099;
+
+}
+.topic .row {
+  display: flex;
+  flex-wrap: nowrap; /* Đảm bảo các sản phẩm nằm trên một hàng */
+  overflow-x: auto; /* Kích hoạt cuộn ngang */
+  -webkit-overflow-scrolling: touch; /* Hỗ trợ cuộn mượt mà trên thiết bị di động */
+  width: 100%;
+  gap: 20px; /* Tạo khoảng cách giữa các sản phẩm */
+  padding-left: 10px; /* Thêm một ít khoảng trống bên trái khi cuộn */
+}
+
+.topic .row::-webkit-scrollbar {
+  display: none; /* Ẩn thanh cuộn */
+}
+
+.topic .col-md-3 {
+  flex: 0 0 auto; /* Đặt kích thước cố định cho mỗi sản phẩm */
+  width: 295px; /* Chiều rộng của mỗi sản phẩm */
+  margin-right: 20px; /* Tạo khoảng cách giữa các sản phẩm (dự phòng nếu không dùng gap) */
+}
+
+.topic .col-md-3:last-child {
+  margin-right: 0; /* Loại bỏ khoảng cách cuối cùng của sản phẩm cuối */
+}
