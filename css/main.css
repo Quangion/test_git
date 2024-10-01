@@ -140,3 +140,11 @@ h3.thechu {
 .topic .col-md-3:last-child {
   margin-right: 0; /* Loại bỏ khoảng cách cuối cùng của sản phẩm cuối */
 }
+#textInfo {
+  text-align: center;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
