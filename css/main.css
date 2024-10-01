@@ -148,3 +148,14 @@ h3.thechu {
   flex-wrap: wrap;
   align-content: center;
 }
+@media (max-width: 768px) {
+  #logoshop{
+    width: 126px;
+    height: 18px;
+    top: 57px;
+    left: 56px;
+    gap: 0px;
+    opacity: 0px;
+    margin-left: 10px;
+  }
+}
